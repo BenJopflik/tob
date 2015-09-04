@@ -91,7 +91,7 @@ uint8_t * Frame::deserialize(uint8_t * data, uint64_t size)
     uint8_t * current = data;
     const uint8_t * const END = data + size;
 
-    fin = *current & 0x80;
+    fin  = *current & 0x80;
     type = *current & 0x0f;
     ++current;
     masked = *current & 0x80;
